@@ -30,3 +30,7 @@ Route::get('/shoes/{id}/edit', 'ShoeController@edit')->name('shoes.edit');
 Route::put('/shoes/{id}', 'ShoeController@update')->name('shoes.update');
 # Delete a shoe
 Route::delete('/shoes/{id}', 'ShoeController@destroy')->name('shoes.destroy');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
