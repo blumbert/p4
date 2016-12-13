@@ -22,7 +22,7 @@ class CreateShoeUserTable extends Migration
             $table->integer('miles')->unsigned()->nullable();
             $table->text('comments')->nullable();
             $table->timestamps();
-        })
+        });
     }
 
     /**
