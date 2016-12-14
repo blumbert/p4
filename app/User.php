@@ -28,6 +28,6 @@ class User extends Authenticatable
     ];
 
     public function shoes() {
-        return $this->belongsToMany('App\Shoe')->withTimestamps();
+        return $this->belongsToMany('App\Shoe')->withPivot('miles', 'comments')->withTimestamps();
     }
 }

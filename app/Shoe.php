@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Shoe extends Model
 {
     public function users() {
-        return $this->belongsToMany('App\User')->withTimestamps();
+        return $this->belongsToMany('App\User')->withPivot('miles', 'comments')->withTimestamps();
     }
 }
