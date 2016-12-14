@@ -18,7 +18,6 @@ class CreateShoesTable extends Migration
             $table->string('company');
             $table->string('model');
             $table->string('heel_toe_offset')->nullable();
-            $table->string('image_url');
             $table->timestamps();
         });
     }

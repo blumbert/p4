@@ -18,11 +18,9 @@
         <div class='flash_message'>{{ Session::get('flash_message') }}</div>
     @endif
 
-    <header>
-    </header>
-
-    <nav>
-        <ul class="nav nav-pills">
+    <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="/">Shoenotes</a></li>
             @if(Auth::check())
                 <li><a href='/shoes'>My shoes</a></li>
                 <li><a href='/shoes/create'>Add shoe</a></li>
@@ -33,13 +31,12 @@
         </ul>
     </nav>
 
-    <section>
+    <section class="container">
         {{-- Main page content will be yielded here --}}
         @yield('content')
     </section>
 
     <footer>
-        &copy; {{ date('Y') }}
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

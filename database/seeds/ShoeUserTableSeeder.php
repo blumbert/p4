@@ -15,8 +15,14 @@ class ShoeUserTableSeeder extends Seeder
     {
         // define array of users and their shoes
         $users = [
-            'jill'  => ['Kinvara 7', 'Ride 6'],
-            'jamal' => ['Ride 6', 'Virrata 2']
+            'jill'  => [
+                'Kinvara 7' => 'http://www.runnersworld.com/sites/runnersworld.com/files/shoe_images/saucony_kinvara_7_m_600.jpg',
+                'Ride 6'    => 'https://images-na.ssl-images-amazon.com/images/I/515LYaG98IL._SX395_.jpg'
+            ],
+            'jamal' => [
+                'Ride 6'    => 'https://images-na.ssl-images-amazon.com/images/I/515LYaG98IL._SX395_.jpg',
+                'Virrata 2' => 'http://www.6pm.com/images/z/2/7/1/2/2/2/2712223-p-MULTIVIEW.jpg'
+            ]
         ];
 
         // define lorem ipsum text for comments
@@ -30,14 +36,15 @@ class ShoeUserTableSeeder extends Seeder
             $user = User::where('name', $user)->first();
 
             // add pivots for shoes
-            foreach ($shoes as $shoeName) {
+            foreach ($shoes as $shoeName => $shoe_image_url) {
                 // get the shoe
                 $shoe = Shoe::where('model', $shoeName)->first();
 
                 // connect user to shoe
                 $user->shoes()->save($shoe, [
-                    'miles' => 250,
-                    'comments' => $comments
+                    'image_url' => $shoe_image_url,
+                    'miles'     => 250,
+                    'comments'  => $comments
                 ]);
             }
         }
