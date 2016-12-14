@@ -32,6 +32,6 @@ class CreateShoeUserTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('shoe_user');
     }
 }

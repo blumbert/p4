@@ -19,18 +19,17 @@
     @endif
 
     <header>
-        @if (Route::has('login'))
-            <div class="top-right links">
-                <a href="{{ url('/login') }}">Login</a>
-                <a href="{{ url('/register') }}">Register</a>
-            </div>
-        @endif
     </header>
 
     <nav>
         <ul class="nav nav-pills">
-            <li><a href='/shoes'>View all shoes</a></li>
-            <li><a href='/shoes/create'>Add a new shoe</a></li>
+            @if(Auth::check())
+                <li><a href='/shoes'>My shoes</a></li>
+                <li><a href='/shoes/create'>Add shoe</a></li>
+            @else
+                <li><a href='/login'>Login</a></li>
+                <li><a href='/register'>Register</a></li>
+            @endif
         </ul>
     </nav>
 

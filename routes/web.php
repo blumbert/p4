@@ -34,3 +34,16 @@ Route::delete('/shoes/{id}', 'ShoeController@destroy')->name('shoes.destroy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+// delete and recreate p4 db
+if(App::environment('local')) {
+
+    Route::get('/drop', function() {
+
+        DB::statement('DROP database p4');
+        DB::statement('CREATE database p4');
+
+        return 'Dropped p4 db; created p4 db.';
+    });
+
+};

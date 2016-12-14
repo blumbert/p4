@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
+use App\Shoe;
 
 class ShoeUserTableSeeder extends Seeder
 {
@@ -25,12 +27,12 @@ class ShoeUserTableSeeder extends Seeder
 
         foreach ($users as $user => $shoes) {
             //get the user
-            $user = User::where('name', $user);
+            $user = User::where('name', $user)->first();
 
             // add pivots for shoes
             foreach ($shoes as $shoeName) {
                 // get the shoe
-                $shoe = Shoe::where('model', $shoeName);
+                $shoe = Shoe::where('model', $shoeName)->first();
 
                 // connect user to shoe
                 $user->shoes()->save($shoe, [
