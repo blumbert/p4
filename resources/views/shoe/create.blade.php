@@ -22,18 +22,22 @@
                 <div class="form-group">
                     <label for="f_company">Company</label>
                     <input class="form-control" type="text" id="f_company" name="company">
+                    <div class="error">{{ $errors->first('company') }}</div>
                 </div>
                 <div class="form-group">
                     <label for="f_model">Model</label>
                     <input class="form-control" type="text" id="f_model" name="model">
+                    <div class="error">{{ $errors->first('model') }}</div>
                 </div>
                 <div class="form-group">
                     <label for="f_image_url">Image URL</label>
                     <input class="form-control" type="text" id="f_image_url" name="image_url">
+                    <div class="error">{{ $errors->first('image_url') }}</div>
                 </div>
                 <div class="form-group">
                     <label for="f_miles">Miles Run</label>
                     <input class="form-control" type="number" name="miles">
+                    <div class="error">{{ $errors->first('miles') }}</div>
                 </div>
                 <div class="form-group">
                     <label for="f_comments">Comments</label>

@@ -40,7 +40,7 @@ class ShoeController extends Controller
     // add a shoe to a user's collection
     public function store(Request $request) {
         // check if an existing shoe was selected
-        if ($request->input('existingShoeId')) {
+        if ($request->input('existingShoeId') > 0) {
             // get the existing shoe
             $shoe = Shoe::find($request->input('existingShoeId'));
         }

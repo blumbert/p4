@@ -13,3 +13,7 @@ img {
 body {
     background-color: rgba(0,50,90,.5) !important;
 }
+
+.error {
+    color: red;
+}

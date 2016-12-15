@@ -12,10 +12,12 @@
                 <div class="form-group">
                     <label for="f_image_url">Image URL</label>
                     <input class="form-control" type="text" id="f_image_url" name="image_url" value="{{ old('image_url', $shoe->pivot->image_url) }}">
+                    <div class="error">{{ $errors->first('image_url') }}</div>
                 </div>
                 <div class="form-group">
                     <label for="f_miles">Miles Run</label>
                     <input class="form-control" type="number" name="miles" value="{{ old('miles', $shoe->pivot->miles) }}">
+                    <div class="error">{{ $errors->first('miles') }}</div>
                 </div>
                 <div class="form-group">
                     <label for="f_comments">Comments</label>
