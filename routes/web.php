@@ -47,3 +47,5 @@ if(App::environment('local')) {
     });
 
 };
+
+Route::get('/logout', 'Auth\LoginController@logout');

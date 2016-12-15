@@ -24,6 +24,11 @@
             @if(Auth::check())
                 <li><a href='/shoes'>My shoes</a></li>
                 <li><a href='/shoes/create'>Add shoe</a></li>
+            @endif
+        </ul>
+        <ul class="nav navbar-nav" id="logout_link">
+            @if(Auth::check())
+                <li><a href='/logout'>Logout</a></li>
             @else
                 <li><a href='/login'>Login</a></li>
                 <li><a href='/register'>Register</a></li>
@@ -41,6 +46,7 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/shoenotes.js"></script>
+    <script src="/js/app.js"></script>
 
     {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
     @yield('body')

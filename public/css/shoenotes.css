@@ -1,3 +1,7 @@
 .hidden-form {
     display: inline;
 }
+
+#logout_link {
+    float: right !important;
+}
