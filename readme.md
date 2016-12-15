@@ -7,7 +7,7 @@
 A simple digital notebook for documenting running shoe experience.
 
 ## Demo
-
+https://youtu.be/SUVV0kTzjQQ
 
 ## Outside code
 * Bootstrap: http://getbootstrap.com/
