@@ -4,7 +4,7 @@
     @foreach($shoes as $shoe)
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3>{{ $shoe->company . $shoe->model }}</h3>
+                <h3>{{ $shoe->company . ' ' . $shoe->model }}</h3>
             </div>
             <div class="panel-body">
                 <img src="{{ $shoe->pivot->image_url }}">
