@@ -36,7 +36,7 @@
                 </div>
                 <div class="form-group">
                     <label for="f_miles">Miles Run</label>
-                    <input class="form-control" type="number" name="miles">
+                    <input class="form-control" type="text" name="miles">
                     <div class="error">{{ $errors->first('miles') }}</div>
                 </div>
                 <div class="form-group">

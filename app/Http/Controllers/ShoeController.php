@@ -52,12 +52,13 @@ class ShoeController extends Controller
             $this->validate($request, [
                 'company' => 'required',
                 'model'   => 'required',
+                'image_url' => 'url',
+                'miles'     => 'numeric',
             ]);
 
             // add shoe to db
             $shoe->company       = $request->input('company');
             $shoe->model         = $request->input('model');
-            $shoe->heel_toe_drop = $request->input('heel_toe_drop');
             $shoe->save();
         }
 
