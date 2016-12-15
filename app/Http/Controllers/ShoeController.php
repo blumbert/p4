@@ -107,4 +107,13 @@ class ShoeController extends Controller
         Session::flash('flash_message', 'Your changes were saved.');
         return redirect('/shoes');
     }
+
+    public function destroy($id) {
+        // detach shoe from user
+        Auth::user()->shoes()->detach($id);
+
+        // redirect back to shoes page
+        Session::flash('flash_message', 'The shoe was removed.');
+        return redirect('/shoes');
+    }
 }
