@@ -17,15 +17,15 @@ Route::get('/', function () {
 
 // shoe resource
 # Index page to show all the shoes
-Route::get('/shoes', 'ShoeController@index')->name('shoes.index');
+Route::get('/shoes', 'ShoeController@index')->name('shoes.index')->middleware('auth');
 # Show a form to create a new shoe
-Route::get('/shoes/create', 'ShoeController@create')->name('shoes.create');
+Route::get('/shoes/create', 'ShoeController@create')->name('shoes.create')->middleware('auth');
 # Process the form to create a new shoe
 Route::post('/shoes', 'ShoeController@store')->name('shoes.store');
 # Show an individual shoe
-Route::get('/shoes/{id}', 'ShoeController@show')->name('shoes.show');
+Route::get('/shoes/{id}', 'ShoeController@show')->name('shoes.show')->middleware('auth');
 # Show form to edit a shoe
-Route::get('/shoes/{id}/edit', 'ShoeController@edit')->name('shoes.edit');
+Route::get('/shoes/{id}/edit', 'ShoeController@edit')->name('shoes.edit')->middleware('auth');
 # Process form to edit a shoe
 Route::put('/shoes/{id}', 'ShoeController@update')->name('shoes.update');
 # Delete a shoe

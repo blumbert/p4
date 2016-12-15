@@ -9,3 +9,7 @@
 img {
     max-width: 400px;
 }
+
+body {
+    background-color: rgba(0,50,90,.5) !important;
+}
