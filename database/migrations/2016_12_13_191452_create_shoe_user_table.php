@@ -20,7 +20,7 @@ class CreateShoeUserTable extends Migration
             $table->foreign('shoe_id')->references('id')->on('shoes');
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('image_url')->nullable();
-            $table->integer('miles')->unsigned()->nullable();
+            $table->string('miles')->nullable();
             $table->text('comments')->nullable();
             $table->timestamps();
         });

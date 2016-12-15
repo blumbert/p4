@@ -10,8 +10,8 @@
             <form method="post" action="/shoes">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <select class="form-control" name="existingShoeId">
-                        <option>-Select-</option>
+                    <select id="f_existingShoeId" class="form-control" name="existingShoeId">
+                        <option value=0>-Select-</option>
                         @foreach($shoes as $shoe)
                             <option value="{{ $shoe->id }}">
                                 {{ $shoe->company }} {{ $shoe->model }}
@@ -19,12 +19,12 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group form-toggle">
                     <label for="f_company">Company</label>
                     <input class="form-control" type="text" id="f_company" name="company">
                     <div class="error">{{ $errors->first('company') }}</div>
                 </div>
-                <div class="form-group">
+                <div class="form-group form-toggle">
                     <label for="f_model">Model</label>
                     <input class="form-control" type="text" id="f_model" name="model">
                     <div class="error">{{ $errors->first('model') }}</div>

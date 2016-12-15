@@ -6,6 +6,7 @@
     </title>
 
     <meta charset='utf-8'>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="/css/shoenotes.css" type='text/css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -51,8 +52,7 @@
     <footer>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="js/shoenotes.js"></script>
+    <script src="/js/shoenotes.js"></script>
     <script src="/js/app.js"></script>
 
     {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}

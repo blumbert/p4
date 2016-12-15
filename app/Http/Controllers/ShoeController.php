@@ -53,7 +53,7 @@ class ShoeController extends Controller
                 'company' => 'required',
                 'model'   => 'required',
                 'image_url' => 'url',
-                'miles'     => 'numeric',
+                'miles'     => 'numeric|min:0',
             ]);
 
             // add shoe to db
@@ -65,7 +65,7 @@ class ShoeController extends Controller
         // validate image and miles input
         $this->validate($request, [
             'image_url' => 'url',
-            'miles'     => 'numeric'
+            'miles'     => 'numeric|min:0'
         ]);
 
         // associate shoe with user
@@ -95,7 +95,7 @@ class ShoeController extends Controller
         // validate input
         $this->validate($request, [
             'image_url' => 'url',
-            'miles'     => 'numeric',
+            'miles'     => 'numeric|min:0',
         ]);
 
         // update relationship info
