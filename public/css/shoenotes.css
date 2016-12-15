@@ -5,3 +5,7 @@
 #logout_link {
     float: right !important;
 }
+
+img {
+    max-width: 400px;
+}
